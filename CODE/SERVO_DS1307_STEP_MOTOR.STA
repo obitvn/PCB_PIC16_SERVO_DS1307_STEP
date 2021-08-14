@@ -1,0 +1,89 @@
+
+ROM used:   3613/8192 (44%)
+            3683/8192 (45%) including unused fragments
+
+            2.1 Average locations per line
+            10.2 Average locations per statement
+
+RAM used:   95/368 (26%) at main() level
+            111/368 (30%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  287   161  45  SERVO_DS1307_STEP_MOTOR.c
+   10     0   0  SERVO_DS1307_STEP_MOTOR.h
+  672     0   0  I:\Cai Phan Mem\CSS PIC\Devices\16F877A.h
+  256    93  26  ds1307.c
+  456   100  28  I:\Cai Phan Mem\CSS PIC\Drivers\lcd.c
+----- -----
+ 1681   354 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     90   2    3             @I2C_READ_1
+0     92   3    1             @I2C_WRITE_1
+0    160   4    8    531  2.7  ds1307_set_date_time
+ Inline         4    367  3.0  ds1307_get_time
+0     21   1    3    240  6.0  ds1307_bin2bcd
+0     21   1    3    168  3.1  ds1307_bcd2bin
+0     20   1    1             @delay_ms2
+0     17   0    1             @delay_us2
+ Inline         3    760  4.5  lcd_read_byte
+0     51   1    2    262  3.7  lcd_read_nibble
+0     58   2    1    399  2.4  lcd_send_nibble
+0    100   3    3    415  3.7  lcd_send_byte
+0     82   2    6    852  6.2  lcd_init
+0     20   1    4    208  6.3  lcd_gotoxy
+0     58   2    1    354  4.7  lcd_putc
+0     34   1    2    187  3.6  servoRotate0
+0     40   1    2    187  3.6  servoRotate45
+0     65   2    1    599  5.2  ScanButton
+0     12   0    1     38  1.0  Mode_Servo
+0    471  13    2    964  3.8  Mode_Step_Servo
+0     11   0    0   5320  5.9  @const731
+0    122   3    5   5320  5.9  @PSTRINGCN7_703
+0     23   1    3             @DIV88
+0     63   2    2   5320  5.9  @PRINTF_U_703
+0     11   0    0   5320  5.9  @const740
+1   1635  45    1   3719  5.4  MAIN
+0      7   0    0   5320  5.9  @const744
+0    116   3    4             @PSTRINGC7_703
+0      8   0    0             @const746
+0     11   0    0             @const747
+0     10   0    0             @const748
+0     11   0    0             @const749
+0     10   0    0             @const750
+0     11   0    0             @const751
+0     11   0    0             @const752
+0     11   0    0             @const753
+0      9   0    0             @const754
+0     99   3    6             @PRINTF_D_703
+0     10   0    0             @const758
+0      8   0    0             @const759
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               22
+    Statements              354
+    Comments                318
+    Volume (V)              54767
+    Difficulty (D)          99.3
+    Effort to implement (E) 5437776
+    Time to implement (T)   83 hours, 55 minutes
+    Est Delivered Bugs (B)  10
+    Cyclomatic Complexity   84
+    Maintainability (MI)    65
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1974  70  
+00800-00FFF  1635  413  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

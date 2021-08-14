@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=12V Pin=D1-2
+Removed Member From Class: ClassName=PIC16_SERVO_DS1307_STEP Member=D1
+Change Component Footprint: Designator=IC1 Old Footprint=TO252-123 New Footprint=TO220-123
+Added Pin To Net: NetName=12V Pin=JDC1-1
+Added Room: Name=PIC16_SERVO_DS1307_STEP

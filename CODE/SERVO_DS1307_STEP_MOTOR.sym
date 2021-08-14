@@ -1,0 +1,177 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-06D days_of_week
+06E-06F @sprintf_string
+070     sec
+071     min
+072     hrs
+073     mode
+074     set_up_value
+075     set_hour
+076     set_minute
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     count
+07C     on_time
+07D     @PRINTF_U_703.P1
+07D     @PRINTF_D_703.P2
+07D     ds1307_set_date_time.day
+07D     servoRotate0.i
+07D     @PSTRINGCN7_703.P1
+07D     lcd_init.i
+07D     servoRotate45.i
+07D     ds1307_get_time.@SCRATCH1
+07D     ScanButton.@SCRATCH1
+07D     Mode_Servo.@SCRATCH1
+07D     Mode_Step_Servo.@SCRATCH1
+07D     MAIN.@SCRATCH1
+07E     @PRINTF_D_703.P1
+07E     ds1307_set_date_time.mth
+07E     @PRINTF_U_703.P1
+07E     lcd_init.@SCRATCH1
+07E     servoRotate0.@SCRATCH1
+07E     servoRotate45.@SCRATCH1
+07E     Mode_Step_Servo.@SCRATCH2
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0A3 lcd_init.LCD_INIT_STRING
+0A0     ds1307_set_date_time.year
+0A0     @delay_us2.P1
+0A0     @PSTRINGCN7_703.@SCRATCH1
+0A0     @PSTRINGC7_703.@SCRATCH1
+0A0     @PRINTF_D_703.@SCRATCH1
+0A1     @I2C_READ_1.P1
+0A1     ds1307_set_date_time.dow
+0A1     @PSTRINGCN7_703.@SCRATCH2
+0A1     @PSTRINGC7_703.@SCRATCH2
+0A1     @PRINTF_D_703.@SCRATCH2
+0A2     ds1307_set_date_time.hr
+0A2     ds1307_bcd2bin.bcd_value
+0A2     @I2C_READ_1.@SCRATCH1
+0A2     @PSTRINGCN7_703.@SCRATCH3
+0A2     @PSTRINGC7_703.@SCRATCH3
+0A2     @PRINTF_D_703.@SCRATCH3
+0A3     ds1307_set_date_time.min
+0A3     ds1307_bcd2bin.temp
+0A3     @I2C_READ_1.@SCRATCH2
+0A3     @PSTRINGCN7_703.@SCRATCH4
+0A3     @PSTRINGC7_703.@SCRATCH4
+0A3     @PRINTF_D_703.@SCRATCH4
+0A4     lcd_putc.c
+0A4     ds1307_set_date_time.sec
+0A4     @DIV88.P1
+0A4     ds1307_bcd2bin.@SCRATCH1
+0A5     @delay_ms2.P1
+0A5     @DIV88.P2
+0A5     lcd_gotoxy.x
+0A5     ds1307_bin2bcd.binary_value
+0A5     ds1307_set_date_time.@SCRATCH1
+0A6     @I2C_WRITE_1.P1
+0A6     ds1307_bin2bcd.temp
+0A6     lcd_gotoxy.y
+0A6     @DIV88.@SCRATCH1
+0A7     lcd_gotoxy.address
+0A7     ds1307_bin2bcd.retval
+0A8     lcd_gotoxy.@SCRATCH1
+0A9     lcd_send_byte.address
+0AA     lcd_send_byte.n
+0AB     lcd_read_byte.low
+0AB     lcd_send_byte.@SCRATCH1
+0AC     lcd_send_nibble.n
+0AC     lcd_read_byte.high
+0AD     lcd_read_nibble.n
+0AD     lcd_read_byte.@SCRATCH1
+0AE     lcd_read_nibble.@SCRATCH1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const731.call
+00000F  @const740.call
+00001A  @const744.call
+000021  @const746.call
+000029  @const747.call
+000034  @const748.call
+00003E  @const749.call
+000049  @const750.call
+000053  @const751.call
+00005E  @const752.call
+000069  @const753.call
+000074  @const754.call
+00007D  @const758.call
+000087  @const759.call
+00008F  @delay_ms2
+0000A3  lcd_send_nibble
+0000DD  lcd_read_nibble
+000110  lcd_send_byte
+000118  lcd_read_byte
+000174  lcd_init
+0001C6  lcd_gotoxy
+0001DA  lcd_putc
+000214  @PSTRINGC7_703
+000288  @delay_us2
+000299  servoRotate0
+0002BB  ScanButton
+0002FC  @I2C_WRITE_1
+000358  @I2C_READ_1
+0003B2  ds1307_bcd2bin
+0003C7  @PSTRINGCN7_703
+000441  @DIV88
+000458  @PRINTF_U_703
+000497  servoRotate45
+0004BF  Mode_Servo
+0004CB  Mode_Step_Servo
+0006A2  @PRINTF_D_703
+000705  ds1307_bin2bcd
+00071A  ds1307_set_date_time
+000800  MAIN
+000800  @cinit1
+00080E  @cinit2
+000CF1  ds1307_get_time
+
+Project Directory:
+    H:\Alitum\PCB\Do An Thue\PCB_PIC16_SERVO_DS1307_STEP\CODE\
+
+Project Files:
+    SERVO_DS1307_STEP_MOTOR.c                               [22-Thg4-19 16:28  CRC=B30F2556]
+    SERVO_DS1307_STEP_MOTOR.h                               [16-Thg4-19 10:37  CRC=2EB8624F]
+    I:\Cai Phan Mem\CSS PIC\Devices\16F877A.h               [18-Thg4-14 16:56  CRC=4F277C97]
+    ds1307.c                                                [02-Thg2-16 00:09  CRC=46D2D368]
+    I:\Cai Phan Mem\CSS PIC\Drivers\lcd.c                   [19-Thg9-13 15:38  CRC=D1A6378A]
+
+Source signature=1B0E46B8
+
+Units:
+    SERVO_DS1307_STEP_MOTOR (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   SERVO_DS1307_STEP_MOTOR.xsym
+    Errors:      SERVO_DS1307_STEP_MOTOR.err
+    Ext Symbols: SERVO_DS1307_STEP_MOTOR.esym
+    INHX8:       SERVO_DS1307_STEP_MOTOR.hex
+    Symbols:     SERVO_DS1307_STEP_MOTOR.sym
+    List:        SERVO_DS1307_STEP_MOTOR.lst
+    Debug/COFF:  SERVO_DS1307_STEP_MOTOR.cof
+    Project:     SERVO_DS1307_STEP_MOTOR.ccspjt
+    Call Tree:   SERVO_DS1307_STEP_MOTOR.tre
+    Statistics:  SERVO_DS1307_STEP_MOTOR.STA

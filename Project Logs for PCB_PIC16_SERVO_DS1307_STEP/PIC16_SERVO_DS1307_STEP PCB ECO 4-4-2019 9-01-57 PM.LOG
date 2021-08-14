@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=LED1-2
+Removed Pin From Net: NetName=VCC Pin=R1-1
+Removed Member From Class: ClassName=PIC16_SERVO_DS1307_STEP Member=LED1
+Removed Member From Class: ClassName=PIC16_SERVO_DS1307_STEP Member=R1
+Added Room: Name=PIC16_SERVO_DS1307_STEP

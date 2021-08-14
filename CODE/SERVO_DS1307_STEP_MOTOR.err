@@ -1,0 +1,6 @@
+>>> Warning 203 "H:\Alitum\PCB\Do An Thue\PCB_PIC16_SERVO_DS1307_STEP\CODE\ds1307.c" Line 233(1,1): Condition always TRUE
+>>> Warning 202 "SERVO_DS1307_STEP_MOTOR.c" Line 23(5,10): Variable never used:   count
+>>> Warning 202 "SERVO_DS1307_STEP_MOTOR.c" Line 23(12,19): Variable never used:   on_time
+      Memory usage:   ROM=44%      RAM=26% - 30%
+      0 Errors,  3 Warnings.
+Build Successful.
